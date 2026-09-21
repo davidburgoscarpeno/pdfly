@@ -25,6 +25,48 @@ export const tools: Tool[] = [
     component: 'JpgToPdfTool',
     implemented: true,
     popular: true
+  },
+  {
+    slug: 'merge-pdf',
+    name: 'Merge PDF',
+    category: 'Organize',
+    description: 'Combine multiple PDFs into one file, in your order.',
+    seoTitle: 'Merge PDF Online Free - Combine PDFs | PDFly',
+    metaDescription: 'Free PDF merger. Combine multiple PDF files into one, in your browser. No upload - files never leave your device.',
+    intro: 'Combine as many PDFs as you need into a single file. Everything runs in your browser: the files never leave your device.',
+    howTo: ['Select the PDFs in the order you want them.', 'Click Merge.', 'Download the combined file.'],
+    examples: [{ title: 'Contract + annexes', output: 'One merged.pdf ready to send.' }],
+    faqs: [{ q: 'Password-protected PDFs?', a: 'Encrypted files that require a password to open cannot be merged - remove protection first.' }],
+    related: ['split-pdf', 'rotate-pdf', 'jpg-to-pdf'],
+    component: 'MergeTool', implemented: true, popular: true
+  },
+  {
+    slug: 'split-pdf',
+    name: 'Split PDF',
+    category: 'Organize',
+    description: 'Extract page ranges into a new PDF.',
+    seoTitle: 'Split PDF Online Free - Extract Pages | PDFly',
+    metaDescription: 'Free PDF splitter. Extract any page range (1-3, 5, 8-10) into a new PDF, in your browser. No upload, no signup.',
+    intro: 'Pull out exactly the pages you need: enter ranges like 1-3, 5 and get a new PDF with just those pages.',
+    howTo: ['Choose a PDF.', 'Enter the page ranges to keep.', 'Download the extracted pages.'],
+    examples: [{ title: 'Pages 2 and 7-9 of a 40-page report', output: 'split.pdf with 4 pages.' }],
+    faqs: [{ q: 'Can I reorder pages?', a: 'Ranges are output in ascending page order. To reorder, merge several extracted files in your order with Merge PDF.' }],
+    related: ['merge-pdf', 'rotate-pdf'],
+    component: 'SplitTool', implemented: true, popular: true
+  },
+  {
+    slug: 'rotate-pdf',
+    name: 'Rotate PDF',
+    category: 'Fix',
+    description: 'Rotate all pages 90, 180 or 270 degrees.',
+    seoTitle: 'Rotate PDF Online Free - Fix Page Orientation | PDFly',
+    metaDescription: 'Free PDF rotator. Rotate all pages of a PDF by 90, 180 or 270 degrees in your browser. No upload, instant download.',
+    intro: 'Scanned documents often arrive sideways. Rotate every page 90, 180 or 270 degrees in one click.',
+    howTo: ['Choose the PDF.', 'Pick the rotation angle.', 'Download the fixed file.'],
+    examples: [{ title: 'Landscape scan shown as portrait', output: 'Rotate 90 degrees and it reads correctly.' }],
+    faqs: [{ q: 'Single pages?', a: 'This rotates the whole document. To fix one page, split it out, rotate, then merge back.' }],
+    related: ['split-pdf', 'merge-pdf'],
+    component: 'RotateTool', implemented: true
   }
 ];
 export const implementedTools = tools.filter((t) => t.implemented);
