@@ -95,6 +95,34 @@ export const tools: Tool[] = [
     faqs: [{ q: 'Scanned PDFs?', a: 'A scan is an image - there is no text layer to extract. This tool works on PDFs with real (selectable) text.' }],
     related: ['jpg-to-pdf', 'split-pdf'],
     component: 'ExtractTextTool', implemented: true, popular: true
+  },
+  {
+    slug: 'reorder-pdf-pages',
+    name: 'Reorder PDF Pages',
+    category: 'Organize',
+    description: 'Rearrange, delete or duplicate pages by typing a new order.',
+    seoTitle: 'Reorder PDF Pages Online Free | PDFly',
+    metaDescription: 'Free PDF page organizer. Rearrange pages in any order, delete or duplicate them, in your browser. No upload, no signup.',
+    intro: 'Type the order you want - 5, 3, 3, 1 - and get a new PDF rearranged exactly that way. Omit pages to delete them, repeat to duplicate.',
+    howTo: ['Choose the PDF.', 'Type the new page order, comma separated.', 'Download the reorganized file.'],
+    examples: [{ title: 'Move the last page to the front', output: 'Order: 10, 1, 2, 3, 4, 5, 6, 7, 8, 9.' }],
+    faqs: [{ q: 'Delete pages?', a: 'Yes - any page you leave out of the list is removed from the output.' }],
+    related: ['split-pdf', 'merge-pdf', 'add-page-numbers'],
+    component: 'OrganizeTool', implemented: true
+  },
+  {
+    slug: 'pdf-metadata-editor',
+    name: 'PDF Metadata Editor',
+    category: 'Fix',
+    description: 'View and edit title, author, subject and keywords of any PDF.',
+    seoTitle: 'PDF Metadata Editor - View and Edit PDF Info | PDFly',
+    metaDescription: 'Free PDF metadata editor. View and change the title, author, subject and keywords of any PDF in your browser. No upload.',
+    intro: 'See exactly what a PDF says about itself - and fix it. Title, author, subject, keywords, creator, producer and dates.',
+    howTo: ['Choose the PDF to view its metadata.', 'Edit the fields you want to change.', 'Download the updated file.'],
+    examples: [{ title: 'Report with wrong author', output: 'Correct author and title without touching the content.' }],
+    faqs: [{ q: 'Why edit metadata?', a: 'Search engines and document managers read the PDF title and author. Clean metadata looks professional and improves findability.' }],
+    related: ['add-page-numbers', 'extract-text-from-pdf'],
+    component: 'MetadataTool', implemented: true
   }
 ];
 export const implementedTools = tools.filter((t) => t.implemented);
