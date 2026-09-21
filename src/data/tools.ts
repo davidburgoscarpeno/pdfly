@@ -67,6 +67,34 @@ export const tools: Tool[] = [
     faqs: [{ q: 'Single pages?', a: 'This rotates the whole document. To fix one page, split it out, rotate, then merge back.' }],
     related: ['split-pdf', 'merge-pdf'],
     component: 'RotateTool', implemented: true
+  },
+  {
+    slug: 'add-page-numbers',
+    name: 'Add Page Numbers to PDF',
+    category: 'Fix',
+    description: 'Stamp "N / total" page numbers at the bottom of every page.',
+    seoTitle: 'Add Page Numbers to PDF Online Free | PDFly',
+    metaDescription: 'Free PDF page numbering tool. Add page numbers to any PDF in your browser - bottom left, center or right. No upload, no signup.',
+    intro: 'Add clean page numbers to any PDF: choose the position and every page gets stamped with its number and the total.',
+    howTo: ['Choose the PDF.', 'Pick bottom left, center or right.', 'Download the numbered file.'],
+    examples: [{ title: '25-page report', output: 'Every page stamped "1 / 25" style at the bottom.' }],
+    faqs: [{ q: 'Will it cover content?', a: 'Numbers are placed 16pt from the bottom edge in small gray type, below almost all document margins.' }],
+    related: ['merge-pdf', 'split-pdf', 'rotate-pdf'],
+    component: 'PageNumbersTool', implemented: true
+  },
+  {
+    slug: 'extract-text-from-pdf',
+    name: 'Extract Text from PDF',
+    category: 'Convert',
+    description: 'Pull the full text out of any PDF, page by page.',
+    seoTitle: 'Extract Text from PDF Online Free | PDFly',
+    metaDescription: 'Free PDF text extractor. Pull all text from any PDF, page by page, in your browser. No upload - files stay on your device.',
+    intro: 'Get the text out of a PDF without copy-pasting page by page. Extraction runs entirely in your browser.',
+    howTo: ['Choose the PDF.', 'Click Extract text.', 'Copy the full text, organized by page.'],
+    examples: [{ title: 'Research paper', output: 'Full text with --- Page N --- markers, ready to paste anywhere.' }],
+    faqs: [{ q: 'Scanned PDFs?', a: 'A scan is an image - there is no text layer to extract. This tool works on PDFs with real (selectable) text.' }],
+    related: ['jpg-to-pdf', 'split-pdf'],
+    component: 'ExtractTextTool', implemented: true, popular: true
   }
 ];
 export const implementedTools = tools.filter((t) => t.implemented);
